@@ -1,0 +1,169 @@
+:root {
+  --main-color: salmon;
+  --accent: aqua;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  flex-wrap: wrap;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 10vh;
+}
+
+header h1 {
+  color: var(--main-color);
+  background-color: var(--accent);
+  width: 25%;
+  line-height: 10vh;
+}
+
+nav {
+  display: flex;
+  font-size: 200%;
+  justify-content: end;
+}
+
+nav a {
+  padding: 28px 15px;
+  text-decoration: underline;
+  text-align: center;
+  color: var(--accent);
+}
+
+figure {
+  height: 15vh;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(./pics/featured-geometric.webp);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  align-self: stretch;
+}
+
+figcaption {
+  background-color: var(--main-color);
+  color: white;
+  font-size: large;
+  padding: 5px;
+  width: 8%;
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+  left: 75%;
+  top: 50%;
+}
+
+main {
+  display: flex;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+article,
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: stretch;
+  width: 100%;
+  margin: 1% 0;
+}
+
+.aside {
+  margin-left: 5%;
+  margin-top: 5px;
+  color: var(--main-color);
+  font-size: 300%;
+  width: 20%;
+  border-right: 3px var(--main-color) solid;
+}
+
+article p {
+  padding-left: 10px;
+  color: var(--main-color);
+  width: 70%;
+}
+
+article ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  position: relative;
+  width: 70%;
+}
+
+article li {
+  margin: 1% 0 0% 1%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+article img {
+  height: 30vh;
+  border: 3px var(--main-color) solid;
+}
+
+#featured,
+#featured img {
+  width: 96.5%;
+  height: 35vh;
+}
+
+#featured img {
+  width: 100%;
+}
+
+h3 {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  width: fit-content;
+  text-align: left;
+  bottom: 50%;
+  left: 2%;
+}
+
+footer ul {
+  display: flex;
+  align-self: stretch;
+  list-style: none;
+  justify-content: space-around;
+  width: 70%;
+  align-items: center;
+}
+
+footer ul li {
+  line-height: 150%;
+  color: var(--main-color);
+  border-bottom: 5px var(--main-color) solid;
+}
+
+/* view size stuff */
+
+@media screen(max-width: 768){
+  body {
+    flex-direction: column;
+  }
+}
