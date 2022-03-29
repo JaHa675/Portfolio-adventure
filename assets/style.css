@@ -29,8 +29,9 @@ header {
 header h1 {
   color: var(--main-color);
   background-color: var(--accent);
-  width: 25%;
+  width: 30%;
   line-height: 10vh;
+  padding-left: 1%;
 }
 
 nav {
@@ -40,7 +41,7 @@ nav {
 }
 
 nav a {
-  padding: 28px 15px;
+  padding: 1vh;
   text-decoration: underline;
   text-align: center;
   color: var(--accent);
@@ -107,6 +108,7 @@ article ul {
   flex-wrap: wrap;
   position: relative;
   width: 70%;
+
 }
 
 article li {
@@ -162,9 +164,93 @@ footer ul li {
 
 /* view size stuff */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   header {
     flex-direction: column;
+    justify-content: unset;
+    height: fit-content;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+  figure {
+    height: 10vh;
+  }
+  figcaption {
+    font-size: large;
+    padding: 5px;
+    width: 20%;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    left: 75%;
+    top: 50%;
+  }
+
+  article,
+  footer {
+    flex-direction: column;
+    align-self: stretch;
+    width: 100%;
+    margin: 1% 0;
+    align-items: center;
+  }
+
+  .aside {
+    margin-top: 5px;
+    width: 90%;
+    text-align: center;
+    font-size: 200%;
+    border-right: 0px;
+    border-bottom: 3px var(--main-color) solid;
+    margin: 0 auto;
+  }
+
+  article p {
+    color: var(--main-color);
+    width: 85%;
+  }
+
+  article ul {
+    flex-direction: column;
     flex-wrap: wrap;
+    width: 90%;
+    row-gap: 1vh;
+  }
+
+  article li {
+    width: 98%;
+    margin: 1vh 0;
+    max-height: 15vh;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  article img {
+    height: 15vh;
+  }
+
+  #featured{
+    width: 99%;
+    max-height:25vh;
+  }
+  #featured img {
+    height: 25vh;
+    width: 98%;
+  }
+
+  footer ul{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  nav {
+    font-size: 150%;
   }
 }
