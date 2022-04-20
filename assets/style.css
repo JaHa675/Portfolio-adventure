@@ -75,6 +75,8 @@ main {
   display: flex;
   margin-top: 15px;
   flex-wrap: wrap;
+  width: 75%;
+  align-self: center;
 }
 
 article,
